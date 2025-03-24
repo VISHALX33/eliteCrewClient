@@ -10,7 +10,7 @@ const ClientsList = () => {
     useEffect(() => {
         const fetchClients = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/clients');
+                const res = await axios.get('https://elitecrewclient.onrender.com/api/clients');
                 setClients(res.data);
             } catch (err) {
                 console.error(err);

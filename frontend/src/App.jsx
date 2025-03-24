@@ -7,6 +7,8 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Job from './components/job';
+import BackToTop from './components/BackToTop';
 const App = () => {
     return (
         <Router>
@@ -14,11 +16,15 @@ const App = () => {
 
             {/* <div className="container mx-auto p-4"> */}
                 <Routes>
+                    
                     <Route path="/" element={<AddClientForm />} />
                     <Route path="/clients" element={<ClientsList />} />
                     <Route path="/About" element={<AboutUs />} />
                     <Route path="/contact" element={<ContactUs />} />
+        <Route path="/jobs" element={ <Job />}/>
+
                 </Routes>
+                <BackToTop /> 
             {/* </div> */}
             <Footer/>
         </Router>

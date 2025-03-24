@@ -1,6 +1,7 @@
 // src/components/AddClientForm.jsx
 import React, { useState } from "react";
 import axios from "axios";
+
 import {
   FaUser,
   FaEnvelope,
@@ -10,6 +11,7 @@ import {
   FaClock,
   FaSave,
 } from "react-icons/fa";
+import Services from "./Services";
 
 const AddClientForm = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +38,7 @@ const AddClientForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/clients", formData);
+      await axios.post("https://elitecrewclient.onrender.com/api/clients", formData);
       alert("Client added successfully!");
       setFormData({
         name: "",
@@ -52,7 +54,8 @@ const AddClientForm = () => {
     }
   };
 
-  return (
+  return (<>
+    <Services/>
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-blue-50 to-purple-50">
       <div className="w-full max-w-4xl p-8 bg-white rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105">
         <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">
@@ -176,7 +179,7 @@ const AddClientForm = () => {
         </form>
       </div>
     </div>
-  );
+    </> );
 };
 
 export default AddClientForm;
