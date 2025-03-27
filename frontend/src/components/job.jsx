@@ -2,7 +2,7 @@ import React from 'react';
 import jobImage from '../assets/job.avif'
 const Job = () => {
   const handleClick = () => {
-    window.location.href = 'https://gleeful-gelato-40913a.netlify.app/'; // Replace with your desired link
+    window.location.href = 'https://eliteworkers.netlify.app/'; // Replace with your desired link
   };
 
   return (<>
@@ -19,11 +19,13 @@ const Job = () => {
           We are looking for talented individuals to join our growing team. Click below to apply and start your journey with us!
         </p>
         <button
-          onClick={handleClick}
-          className="px-8 py-4 bg-amber-400 text-white font-semibold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
-        >
-          Apply for Job
-        </button>
+  onClick={handleClick}
+  className="px-10 py-5 bg-gradient-to-r from-amber-400 to-amber-500 text-white font-bold rounded-xl shadow-lg hover:bg-gradient-to-r hover:from-amber-500 hover:to-amber-600 transform transition-all duration-500 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 shadow-amber-400/30 hover:shadow-blue-500/40 relative overflow-hidden group"
+>
+  <span className="relative z-10">Apply for Job</span>
+  <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></span>
+  <span className="absolute top-0 left-0 w-full h-0.5 bg-white/30 group-hover:h-full group-hover:opacity-0 transition-all duration-700 ease-in-out"></span>
+</button>
       </div>
     </div>
     </>

@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="bg-amber-400 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-black text-2xl font-bold hover:scale-105 transition-transform duration-300">
+        <Link to="https://elite-crew.vercel.app/" className="text-black text-2xl font-bold hover:scale-105 transition-transform duration-300">
           EliteCrew
         </Link>
 
